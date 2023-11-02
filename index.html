@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaamHaiNa-Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="voice-input.js"></script>
+    <!-- <script src="microphone-recording.js"></script> -->
+    <script src="form-submission.js"></script>
+    <script src="language-selector.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>KaamHaiNa</h1>
+
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <label for="language-selector">Select Language:</label>
+            <select id="language-selector">
+                <option value="english">English</option>
+                <option value="hindi">हिंदी</option>
+                <option value="telugu">తెలుగు</option>
+            </select>
+        </div>
+        <br>
+
+        <form action="https://script.google.com/macros/s/AKfycbysuMoiGAtJ4_TX7tXen7HPaPMt26AFQCImoxKdV54/dev" method="post" id="query-form">
+            <!-- <audio id="audioElement" controls></audio> -->
+            <div class="input-group">
+                <div class="input-with-mic">
+                    <label class="language-label" for="name" data-english="Name:" data-hindi="नाम:" data-telugu="పేరు:">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="microphone-icon"><i class="fas fa-microphone"></i></span>
+                </div>
+                <div class="input-with-mic">
+                    <label class="language-label" for="age" data-english="Age:" data-hindi="आयु:" data-telugu="పట్టు:">Age:</label>
+                    <input type="text" id="age" name="age" required>
+                    <span class="microphone-icon"><i class="fas fa-microphone"></i></span>
+                </div>
+                <div class="input-with-mic">
+                    <label class="language-label" for="number" data-english="Phone Number:" data-hindi="फ़ोन नंबर:" data-telugu="
+                    ఫోను నంబరు:">Phone Number:</label>
+                    <input type="text" id="number" name="number" required>
+                    <span class="microphone-icon"><i class="fas fa-microphone"></i></span>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-with-mic">
+                    <label class="language-label" for="occupation" data-english="Occupation:" data-hindi="व्यवसाय:" data-telugu="వృత్తి:">Occupation:</label>
+                    <input type="text" id="occupation" name="occupation" required>
+                    <span class="microphone-icon"><i class="fas fa-microphone"></i></span>
+                </div>
+                <div class="input-with-mic">
+                    <label class="language-label" for="experience" data-english="Years of Experience:" data-hindi="अनुभव के साल:" data-telugu="నివేదిక సంవత్సరాలు:">Years of Experience:</label>
+                    <input type="text" id="experience" name="experience" required>
+                    <span class="microphone-icon"><i class="fas fa-microphone"></i></span>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-with-mic">
+                    <label class="language-label" for="currentCity" data-english="Current City:" data-hindi="वर्तमान शहर:" data-telugu="ప్రస్తుత నగరం:">Current City:</label>
+                    <input type="text" id="currentCity" name="currentCity" required>
+                    <span class="microphone-icon"><i class="fas fa-microphone"></i></span>
+                </div>
+                <div class="input-with-mic">
+                    <label class="language-label" for="interestedCity" data-english="Interested City:" data-hindi="इच्छुक शहर:" data-telugu="ఆసక్తి కలదు నగరం:">Interested City:</label>
+                    <input type="text" id="interestedCity" name="interestedCity" required>
+                    <span class="microphone-icon"><i class="fas fa-microphone"></i></span>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="radio-group">
+                    <label class="language-label" data-english="Select a Job Type:" data-hindi="कार्य का प्रकार:" data-telugu="ఉద్యోగ రకము:">Select a Job Type:</label>
+                    <div>
+                        <input type="radio" id="salary" name="jobType" value="Salary" required>
+                        <label for="salary" class="language-label" data-english="Salary" data-hindi="वेतन" data-telugu="జీతాలు">Salary</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="contract" name="jobType" value="Contract">
+                        <label for="contract" class="language-label" data-english="Contract" data-hindi="ठcontract्ठ" data-telugu="ఒప్పందం">Contract</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="dailyWages" name="jobType" value="Daily Wages">
+                        <label for="dailyWages" class="language-label" data-english="Daily Wages" data-hindi="रोज़गारी" data-telugu="రోజుకీ జీతాలు">Daily Wages</label>
+                    </div>
+                </div>
+            
+                <div class="input-group radio-group">
+                    <label class="language-label" data-english="Gender:" data-hindi="लिंग:" data-telugu="లింగం:">Gender:</label>
+                    <div class="radio-input">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male" class="language-label" data-english="Male" data-hindi="पुरुष" data-telugu="పురుషుడు">Male</label>
+                    </div>
+                    <div class="radio-input">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female" class="language-label" data-english="Female" data-hindi="महिला" data-telugu="మహిళ">Female</label>
+                    </div>
+                </div>
+            </div>
+            
+            <label class="language-label" for="additionalInformation" data-english="Additional Information:" data-hindi="अतिरिक्त जानकारी:" data-telugu="అదనపు సమాచారం:">Additional Information:</label>
+            <textarea id="additionalInformation" name="additionalInformation" rows="4" placeholder="Optional"></textarea>
+            <span class="microphone-icon"><i class="fas fa-microphone"></i></span>
+<!-- 
+            <label class="language-label" for="audioFile" data-english="Audio File:" data-hindi="ऑडियो फ़ाइल:" data-telugu="ఆడియో ఫైల్:"></label>
+            <input type="file" id="audioFile" name="audioFile" accept=".wav, .mp3, .opus"> -->
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script src="form-submission.js"></script>
+</body>
+</html>
